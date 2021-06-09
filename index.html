@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number generator</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="content">
+        <ul class="nav nav-bar">
+            <li><a href="" name="index.html" class="active">Generatorius</a></li>
+            <li><a href="#" name="instructions.html">Naudotojo instrukcija</a></li>
+        </ul>
+        <div class="container-fluid">
+            <h1>LCG GENERATORIUS</h1>
+            <div class="center">
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div id="params">
+                                    <div class="block">
+                                        <label class="info">Daugiklis <b>a</b><span class="instructions">Skaičius <b>a -
+                                                    1</b>
+                                                turi dalintis iš visų
+                                                skaičiaus <b>m</b> pirminių daliklių.</span></label>
+                                        <input type="number" id="a">
+                                    </div>
+                                    <div class="block">
+                                        <label class="info">Prieaugis <b>c</b><span class="instructions">Skaičius
+                                                <b>c</b> kartu
+                                                su skaičium <b>m</b> turi
+                                                būti santykinai pirminiai skaičiai, t.y. neturėtu bendrų daliklių
+                                                išskyrus
+                                                1.</span></label>
+                                        <input type="number" id="c">
+                                    </div>
+                                    <div class="block">
+                                        <label class="info">Modulis <b>m</b><span class="instructions">Skaičius <b>m</b>
+                                                tūrėtų
+                                                būti
+                                                salyginai didelis, jis žymi generuojamo intervalo ilgį, kuris negali
+                                                būti
+                                                didesnis už
+                                                <b>m-1</b></span></label>
+                                        <input type="number" id="m">
+                                    </div>
+                                    <div class="block">
+                                        <label>Rankinis <b>z</b> parinkimas<input type="checkbox" id="manual"></label>
+                                        <div id="seed">
+                                            <label class="info">Seed <b>z</b><span class="instructions">Skaičius
+                                                    <b>z</b>
+                                                    pradžios
+                                                    taškas</span></label>
+                                            <input type="number" id="z"><br>
+                                        </div>
+                                    </div>
+                                    <div class="block">
+                                        <label class="info">Iteracijos<span class="instructions">Ciklų
+                                                kiekis.</span></label>
+                                        <input type="number" id="iter">
+                                    </div>
+                                    <div id="radioBtns" class="block">
+                                        <span>Generavimo greitis: <b>x1</b><input type="radio" name="radioBtn_group"
+                                                id="x_10"></span>
+                                        <span><b>x10</b><input type="radio" name="radioBtn_group" id="x_100"></span>
+                                        <span><b>x100</b><input type="radio" name="radioBtn_group" id="x_1000"
+                                                checked="checked"></span>
+                                    </div>
+                                    <div id="buttons">
+                                        <Button id="generateBtn"
+                                            class="btn-sm col-xs-3 margin-right">Generuoti</Button><br />
+                                        <Button id="drawHisto"
+                                            class="btn-sm col-xs-3 margin-right">Histograma</Button><br />
+                                        <Button id="reset" class="btn-sm col-xs-3 margin-right">Išvalyti</Button><br />
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="target" class="col-sm-5">
+                                <canvas id="canvas" width="400" height="400"> </canvas>
+                            </div>
+                            <div class="col-sm-3">
+                                <div id="result">
+                                    <div id="pi">
+                                        <span id="pi-symbol">π</span> ≈ <span id="pi-digits"></span><br />
+                                    </div>
+                                    <span>Iteracijos:</span> <span id="total"></span><br />
+                                    <span>Apskritime:</span> <span id="in-circle"></span><br />
+                                    <span>Pi paklaida:</span> <span id="pi-error"></span>
+                                </div>
+                            </div>
+                            <div id="histo" class="col-sm-11"></div>
+                        </div>
+                    </div>
+                    <div id="sequence" class="col-sm-4"></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p id="copywrite" class="center">VŠĮ &quot; Vilniaus Verso Kolegija &quot; 2021&copy;</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js "></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js "></script>
+    <script src="js/dart.js "></script>
+    <script src="js/Target.js "></script>
+    <script src="js/TargetCanvas.js "></script>
+    <script src="js/Graphs.js "></script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content">
+        <ul class="nav nav-list">
+            <li><a href="" name="index.html" class="text_white hover_black">Generatorius</a></li>
+            <li><a href="" name="instructions.html" class="active">Naudotojo instrukcija</a></li>
+        </ul>
+        <div id="bg-img">
+            <img src="../baigiamasis/images/instrukcija.jpg" alt="" srcset="">
+        </div>
+        <footer>
+            <p id="copywrite" class="center">VŠĮ &quot; Vilniaus Verso Kolegija &quot; 2021&copy;</p>
+        </footer>
+    </div>
+    <script>
+        $("a").click(function () {
+            var url = this.name;
+            console.log(url)
+            $('#content').load(url, " #content", function (response, status, xhr) {
+                if (status == "error") {
+                    var msg = "Sorry but there was an error: ";
+                    $("#error").html(msg + xhr.status + " " + xhr.statusText);
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

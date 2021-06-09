@@ -1,0 +1,130 @@
+body {
+    background: beige !important;
+}
+
+h1 {
+    text-align: center;
+}
+
+#target {
+    display: block;
+}
+
+#canvas {
+    border: 1px solid black;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+a:hover {
+    color: rgb(23, 156, 245);
+}
+
+.active {
+    color: blue;
+    text-decoration: underline;
+}
+
+#pi,
+#formula {
+    font-size: 125%;
+}
+
+#pi-symbol {
+    font-weight: bold;
+}
+
+#correct-digits {
+    font-weight: bold;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+}
+
+#buttons {
+    margin-top: 0.5em;
+    display: inline-flex;
+}
+
+button {
+    margin-right: 10px !important;
+}
+
+li {
+    display: inline;
+    padding-right: 30px;
+}
+
+.info .instructions {
+    visibility: hidden;
+    width: 200px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+}
+
+.info:hover .instructions {
+    visibility: visible;
+}
+
+#tableSeq {
+    font-size: 13px;
+    width: 300px;
+    overflow: auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#copywrite {
+    font-weight: bold;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.canvasjs-chart-container {
+    display: none;
+}
+
+.block {
+    margin-bottom: 0.2em;
+}
+
+.canvasjs-chart-credit {
+    display: none;
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+}
+
+#readOnly {
+    pointer-events: none;
+    border: 1px solid black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+#histo {
+    height: 350px;
+}
